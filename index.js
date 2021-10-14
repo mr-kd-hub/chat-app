@@ -34,18 +34,12 @@ io.on("connection", (socket) => {
     socket.join(user.room);
 
     //send message to all newly connected user
-    socket.emit(
-      "message",
-      generateMessage("Welcome " + user.username, user.username)
-    );
+    socket.emit("message", generateMessage("Welcome " + user.username));
 
     //when new user connected send message to others
     socket.broadcast
       .to(user.room)
-      .emit(
-        "message",
-        generateMessage(`${user.username} has joined`, user.username)
-      );
+      .emit("message", generateMessage(`${user.username} has joined`));
 
     io.to(user.room).emit("roomData", {
       room: user.room,
