@@ -16,9 +16,34 @@
     />
   </head>
   <body>
-    <div class="chat row">
-      <div class="chat__sidebar col-sm-2" id="sidebar"></div>
-      <div class="chat__main col-sm-10">
+    <!-- <div class="chat">
+      <div class="row">
+        <div class="col-sm-1">
+          <div class="chat__sidebar" id="sidebar"></div>
+        </div>
+        <div class="col-sm-11">
+          <div id="messages" class="chat__messages"></div>
+          <div class="row">
+            <div class="compose">
+              <div class="col-sm-8">
+                <input class="msg" placeholder="Message" autocomplete="off" />
+              </div>
+              <div class="col-sm-2">
+                <button onClick="sendBtn()">Send</button>
+              </div>
+              <div class="col-sm-2">
+                <button onClick="sendLocationBtn()">Send loaction</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <!--  -->
+    <div class="chat">
+      <div class="chat__sidebar" id="sidebar"></div>
+      <div class="chat__main">
         <div class="mt-2 ml-2">
           <h3>Chat Box</h3>
           <p>by Dhruv Koladiya</p>
@@ -27,7 +52,7 @@
         <div class="compose">
           <input class="msg" placeholder="Message" autocomplete="off" />
           <button onClick="sendBtn()">Send</button>
-          <div class="ml-2">
+          <div class="">
             <button onClick="sendLocationBtn()">Send loaction</button>
           </div>
         </div>
